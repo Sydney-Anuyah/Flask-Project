@@ -1,0 +1,7 @@
+from market import db
+from market import Item
+db.create_all()
+item1 = Item(name = 'IPhone 10', price=500, barcode = '754528859456', description = 'None')
+item2 = Item(name = 'Laptop', price=900, barcode = '556968528628', description = 'New')
+>>> db.session.add(item1, item2)
+>>> db.session.commit()
